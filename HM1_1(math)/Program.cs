@@ -166,7 +166,14 @@ namespace HM1_1_math_
                     Console.WriteLine($"Медиана указанного списка значения = {Median(userNumbersArray)}");
                     break;
                 case MathOperation.Mode:
-                    Console.WriteLine($"Мода указанного списка значения = {Mode(userNumbersArray)}");
+                    if(Mode(userNumbersArray) == 0)
+                    {
+                        Console.WriteLine("Все значения уникальны, для данного набора чисел невозможно найти моду!");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Мода указанного списка значения = {Mode(userNumbersArray)}");
+                    }
                     break;
                 default:
                     Console.WriteLine("Данного метода нет");
